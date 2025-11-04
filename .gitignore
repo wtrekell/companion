@@ -4,6 +4,8 @@ thumbs.db
 # ignore all .pxd files anywhere
 *.pxd
 
+--
+
 # only .pxd at repo root
 # /*.pxd
 
