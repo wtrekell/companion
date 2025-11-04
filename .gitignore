@@ -1,2 +1,36 @@
 .DS_Store
 thumbs.db
+
+# ignore all .pxd files anywhere
+*.pxd
+
+# only .pxd at repo root
+# /*.pxd
+
+# .pxd under img/ at any depth (subdirs included)
+# img/**/*.pxd
+
+# * = any string except "/": .pxd directly in img/ (not subdirs)
+# img/*.pxd
+
+# ? = any single char except "/": photo0.pxd … photo9.pxd in img/
+# img/photo?.pxd
+
+# [0-9] = character class/range
+# img/photo[0-9].pxd
+
+# ** = can cross directory boundaries
+# img/**/raw/**/*.pxd
+
+# Leading "/" = anchor to repo root
+# /img/*.pxd
+
+# Trailing "/" = directory-only match
+# img/
+
+# "!" = negate (re-include after an ignore); later lines win
+# img/*.pxd
+# !img/keep.pxd
+
+# "#" = comment; escape to match a literal "#"
+# \#img-notes.pxd
