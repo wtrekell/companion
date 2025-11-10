@@ -1,6 +1,6 @@
 # Companion Tools
 
-A collection of content gathering and processing utilities for research and analysis.
+**Syntax & Empathy Repository** - A collection of content gathering and processing utilities for research and analysis.
 
 ## Overview
 

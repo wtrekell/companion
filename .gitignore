@@ -23,6 +23,7 @@ wheels/
 .DS_Store
 thumbs.db
 *.m4a
+*.pxd
 tools/**/*.pdf
 **/credentials/
 **/*_token.json
