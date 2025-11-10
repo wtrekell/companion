@@ -1,6 +1,8 @@
 ---
 permalink: /articles/
 title: "Articles"
+excerpt: "Thoughts on design leadership, Git workflows, and AI collaboration"
+description: "Explore articles about design leadership, Git workflows, AI collaboration patterns, and technical documentation best practices."
 layout: single
 author_profile: true
 ---

@@ -1,6 +1,8 @@
 ---
 permalink: /resources/
 title: "Resources"
+excerpt: "Useful tools, templates, and resources for working with AI"
+description: "Collection of useful tools, templates, code patterns, and resources for working with AI, design systems, and technical documentation."
 layout: single
 author_profile: true
 toc: true

@@ -1,6 +1,8 @@
 ---
 permalink: /projects/
 title: "Projects"
+excerpt: "Creative projects and experiments with AI tools and applications"
+description: "Showcase of creative projects, experiments with AI tools, and documentation of innovative applications and workflows."
 layout: single
 author_profile: true
 ---

@@ -25,6 +25,18 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/syntax-and-empathy"
 
+# SEO Settings
+social:
+  type: Organization # Person or Organization (for schema.org metadata)
+  name: "Syntax & Empathy"
+  links:
+    - "https://github.com/syntax-and-empathy"
+
+# Open Graph / Twitter Card defaults
+og_image: # path to default Open Graph/Twitter Card image, e.g. "/assets/images/site-logo.png"
+twitter:
+  username: # Twitter username for Twitter Card metadata
+
 # Site Footer
 footer:
   links:
@@ -104,6 +116,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-include-cache
   - jekyll-archives
 
@@ -113,6 +126,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-include-cache
   - jekyll-archives
 
@@ -145,6 +159,7 @@ defaults:
       related: true
       toc: true
       toc_sticky: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
@@ -152,6 +167,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+      toc: true
+      toc_sticky: true
   # _articles (custom collection)
   - scope:
       path: "02-articles"
@@ -162,6 +179,7 @@ defaults:
       read_time: true
       toc: true
       toc_sticky: true
+      show_date: true
 
 # Theme Settings
 # Use theme with gem-based install

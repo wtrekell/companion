@@ -1,12 +1,13 @@
 ---
 layout: home
 title: "Syntax & Empathy"
+excerpt: "A repository to share artifacts created when working with AI and various applications."
+description: "Exploring the intersection of design leadership, AI, and technology. Articles, projects, and resources for AI collaboration and technical documentation."
 author_profile: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: # Add header image path here if desired
-excerpt: "A repository to share artifacts created when working with AI and various applications."
 intro:
   - excerpt: 'Welcome to Syntax & Empathy - exploring the intersection of design leadership, AI, and technology.'
 feature_row:

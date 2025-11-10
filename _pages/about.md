@@ -1,6 +1,8 @@
 ---
 permalink: /about/
 title: "About"
+excerpt: "About Syntax & Empathy - exploring technical precision and human-centered design"
+description: "Learn about Syntax & Empathy, a space dedicated to exploring the intersection of technical excellence and human understanding through AI artifacts and design leadership."
 layout: single
 author_profile: true
 ---
