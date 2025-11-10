@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /assets/js/
+Allow: /assets/css/
+
+Sitemap: https://syntax-and-empathy.github.io/companion/sitemap.xml

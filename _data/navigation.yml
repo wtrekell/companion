@@ -1,0 +1,29 @@
+# Main Navigation
+main:
+  - title: "Home"
+    url: /
+  - title: "Articles"
+    url: /articles/
+  - title: "Projects"
+    url: /projects/
+  - title: "Resources"
+    url: /resources/
+  - title: "About"
+    url: /about/
+  - title: "GitHub"
+    url: https://github.com/syntax-and-empathy/companion
+
+# Sidebar Navigation (optional, for specific pages)
+docs:
+  - title: "Getting Started"
+    children:
+      - title: "About"
+        url: /about/
+      - title: "Articles"
+        url: /articles/
+  - title: "Content"
+    children:
+      - title: "Projects"
+        url: /projects/
+      - title: "Resources"
+        url: /resources/
