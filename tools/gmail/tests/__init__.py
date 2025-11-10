@@ -1,0 +1,1 @@
+"""Gmail collector test suite."""

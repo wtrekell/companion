@@ -1,0 +1,109 @@
+# Reddit Collector Configuration - Design-focused subreddits
+# Migrated from signal/settings/reddit-design.yaml
+# Updated paths to be root-relative
+
+output_dir: "output/reddit/design"
+rate_limit_seconds: 3.0
+user_agent: "Signal:Reddit:Collector:v2.0.0"
+client_id: "${REDDIT_CLIENT_ID}"
+client_secret: "${REDDIT_CLIENT_SECRET}"
+
+# Default filters applied to all subreddits (can be overridden per subreddit)
+default_filters:
+  max_age_days: 31
+  min_score: 5
+  include_keywords: [
+      "accessibility*",
+      "adobe",
+      "artificial intelligence*",
+      "automation*",
+      "blueprint*",
+      "canva",
+      "collaborat*",
+      "design system*",
+      "feedback*",
+      "figma*",
+      "gen ai*",
+      "genai*",
+      "generative*",
+      "integration*",
+      "interview*",
+      "invision",
+      "miro",
+      "mural",
+      "notion",
+      "persona*",
+      "prompt*",
+      "prototype*",
+      "sketch",
+      "survey*",
+      "user journey*",
+      "user*research*",
+      "user*testing*",
+      "workflow*",
+      "workshop*",
+      "zeplin"
+    ]
+  exclude_keywords: ["promotional", "spam", "advertisement"]
+
+subreddits:
+  - name: "UXDesign"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "userexperience"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "SampleSize"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "UserExperienceDesign"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "UIUX"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "UXandUI"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "uxjobs"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "uiuxdesignerjobs"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "UiUxDesign"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "UXResearch"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "SurveyResearch"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "UX_Design"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "product_design"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "productdesign"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true
+  - name: "servicedesign"
+    max_posts: 50
+    sort_by: "new"
+    include_comments: true

@@ -1,0 +1,1 @@
+"""Web articles collector package."""

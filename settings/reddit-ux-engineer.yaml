@@ -1,0 +1,119 @@
+# Reddit Collector Configuration
+# Example configuration for Signal Reddit content collection
+
+output_dir: "output/reddit"
+rate_limit_seconds: 2.0
+
+user_agent: "Signal:Reddit:Collector:v2.0.0"
+client_id: "${REDDIT_CLIENT_ID}"
+client_secret: "${REDDIT_CLIENT_SECRET}"
+
+# Default filters applied to all subreddits (can be overridden per subreddit)
+default_filters:
+  max_age_days: 21
+  min_score: 5
+  min_comments: 3
+  include_keywords: ["anthropic", "deepmind", "deepseek", "hugging face", "openai", "perplexity labs", "mistral", "llm", "large multimodal model", "multimodal model", "bard", "chatgpt*", "codex*", "gpt*", "sora*", "claude*", "claude code", "sonnet*", "sonnet*", "opus*", "deepseek*","gemini*","kimi*", "llama*", "mistral*", "perplexity", "qwen*"]
+  exclude_keywords: ["promotional", "spam", "advertisement"]
+
+
+# Subreddit configurations
+subreddits:
+  - name: "UXDesign"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["UX engineer", "design to development", "design systems", "component library", "Figma to code", "developer handoff"]
+
+  - name: "userexperience"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["usability testing", "user research", "UX engineer", "technical UX", "coding for designers"]
+
+  - name: "DesignSystems"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["component API design", "design tokens", "Storybook", "Figma tokens", "design system architecture", "versioning"]
+
+  - name: "webdev"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["UX engineer", "frontend designer", "design engineer", "React components", "UI development"]
+
+  - name: "Frontend"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["design systems", "component library", "UI components", "design tokens", "CSS architecture"]
+
+  - name: "javascript"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["React components", "Vue components", "design implementation", "interactive UI", "component props"]
+
+  - name: "reactjs"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["design system", "component library", "Storybook", "styled components", "design tokens", "prop types"]
+
+  - name: "FigmaDesign"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["developer handoff", "design tokens", "Figma to code", "component variants", "auto-layout"]
+
+  - name: "UI_Design"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["implementation feasibility", "technical constraints", "responsive design", "CSS capabilities"]
+
+  - name: "cscareerquestions"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["UX engineer", "design engineer", "frontend designer", "career switch to UX"]
+
+  - name: "forhire"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["UX Engineer available", "design systems specialist", "React component development"]
+
+  - name: "freelance"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["UX Engineer available", "design systems specialist", "React component development"]
+
+  - name: "accessibility"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["accessible components", "WCAG 2.1", "semantic HTML", "keyboard navigation", "focus management"]
+
+  - name: "SideProject"
+    max_posts: 20
+    include_comments: true
+    sort_by: "new"
+    filters:
+      include_keywords: ["design system", "component library", "accessibility", "responsive design"]
+

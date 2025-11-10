@@ -1,0 +1,32 @@
+model: medium
+language: en
+temperature: 0
+output_format: markdown
+output_dir: "output/transcriptions"  # Output directory relative to project root
+include_timestamps: false
+# You can tune the settings in config.yaml if needed:
+#   - pause_threshold: 1.5 for more paragraph breaks (more sensitive)
+#  - pause_threshold: 3.0 for fewer breaks (only major topic shifts)
+#  - min_paragraph_chars: 50 for shorter paragraphs
+#  - min_paragraph_chars: 200 for longer paragraphs
+paragraph_detection:
+  enabled: true
+  pause_threshold: 2.0  # seconds - longer pauses create new paragraphs
+  min_paragraph_chars: 100  # minimum characters before allowing paragraph break
+
+# Content Filters (Optional)
+# Filters are applied after transcription to determine which audio files to keep
+filters:
+  max_age_days: null  # Only process audio files modified within N days (null = no age filter)
+  include_keywords: []  # Only keep transcriptions containing at least one keyword (supports wildcards: *, ?)
+  exclude_keywords: []  # Skip transcriptions containing any of these keywords (supports wildcards: *, ?)
+
+# Example filter configuration:
+# filters:
+#   max_age_days: 7  # Only process audio files from last 7 days
+#   include_keywords:
+#     - "meeting"
+#     - "interview*"  # Matches "interview", "interviews", etc.
+#   exclude_keywords:
+#     - "test"
+#     - "draft*"

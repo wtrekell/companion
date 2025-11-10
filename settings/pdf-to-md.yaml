@@ -1,0 +1,47 @@
+# PDF to Markdown Conversion Configuration
+
+# Output Configuration
+output_dir: "output/pdf-to-md"  # Output directory relative to project root
+
+# Function Parameters (passed to convert_single_pdf)
+max_pages: null  # Maximum number of pages to process (null = all pages)
+start_page: null  # Which page to start processing from (null = first page)
+metadata: null  # Additional metadata dictionary (null = none)
+langs: null  # List of languages in document, e.g., ["en", "es"] (null = auto-detect)
+batch_multiplier: 1  # Controls processing batch size (higher = faster but more memory)
+ocr_all_pages: false  # Force OCR on all pages even if text is extractable
+
+# General Settings
+image_dpi: 96  # DPI to render extracted images at
+extract_images: true  # Whether to extract images from PDFs
+paginate_output: false  # Add page breaks to output markdown
+torch_device: null  # Force specific device ("cuda", "cpu", "mps") - null = auto-detect
+
+# OCR Settings
+ocr_all_pages_global: false  # Run OCR even on pages with extractable text
+ocr_engine: surya  # Which OCR engine to use ("surya" or "ocrmypdf")
+default_lang: English  # Default language assumption
+
+# Layout & Structure Settings
+bad_span_types:  # Elements to filter out from conversion
+  - Page-footer
+  - Page-header
+  - Picture
+bbox_intersection_thresh: 0.7  # Overlap threshold for matching layout boxes
+
+# Content Filters (Optional)
+# Filters are applied after conversion to determine which PDFs to keep
+filters:
+  max_age_days: null  # Only process PDFs modified within N days (null = no age filter)
+  include_keywords: []  # Only keep PDFs containing at least one keyword (supports wildcards: *, ?)
+  exclude_keywords: []  # Skip PDFs containing any of these keywords (supports wildcards: *, ?)
+
+# Example filter configuration:
+# filters:
+#   max_age_days: 30  # Only process PDFs modified in last 30 days
+#   include_keywords:
+#     - "report"
+#     - "analysis*"  # Matches "analysis", "analysisReport", etc.
+#   exclude_keywords:
+#     - "draft"
+#     - "temp*"
