@@ -45,6 +45,7 @@ vendor/
 # Ruby
 Gemfile.lock
 .bundle/
+bin/
 
 # Node modules (if using any)
 node_modules/
