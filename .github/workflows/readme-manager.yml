@@ -1,0 +1,101 @@
+name: README Manager
+
+on:
+  # Manual trigger for full review or ensure modes
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'README management mode'
+        required: true
+        type: choice
+        options:
+          - 'full-review'
+          - 'ensure-exists'
+        default: 'ensure-exists'
+
+  # Automatic trigger on push
+  push:
+    branches:
+      - main
+      - 'claude/**'
+    paths-ignore:
+      - '.github/**'
+      - '*.md'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  manage-readmes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r .github/scripts/requirements.txt
+
+      - name: Determine mode
+        id: mode
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "mode=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+          else
+            echo "mode=auto-update" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Get changed directories
+        id: changes
+        if: steps.mode.outputs.mode == 'auto-update'
+        run: |
+          # Get changed files from the push
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git diff --name-only HEAD)
+
+          # Extract unique directories from changed files
+          CHANGED_DIRS=$(echo "$CHANGED_FILES" | grep -v '^\.github/' | xargs -I {} dirname {} | sort -u | jq -R -s -c 'split("\n")[:-1]')
+
+          echo "directories=$CHANGED_DIRS" >> $GITHUB_OUTPUT
+          echo "Changed directories: $CHANGED_DIRS"
+
+      - name: Run README Manager
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MODE: ${{ steps.mode.outputs.mode }}
+          CHANGED_DIRS: ${{ steps.changes.outputs.directories }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: ${{ github.ref }}
+        run: |
+          python .github/scripts/manage_readmes.py
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push changes
+        run: |
+          git add README.md */README.md */*/README.md */*/*/README.md */*/*/*/README.md */*/*/*/*/README.md
+
+          if git diff --staged --quiet; then
+            echo "No README changes to commit"
+          else
+            git commit -m "Update README files via ${{ steps.mode.outputs.mode }} mode
+
+            Automated README maintenance using Gemini 2.5 Flash
+            Mode: ${{ steps.mode.outputs.mode }}
+            Triggered by: ${{ github.event_name }}"
+
+            git push
+          fi

@@ -1,0 +1,2 @@
+# Python dependencies for README Manager
+google-generativeai>=0.3.0
