@@ -22,4 +22,4 @@ I'm a UX designer with 30+ years of experience translating technical complexity 
 
 Are you spending more time correcting outputs than the AI saved you? Managing more AI tools than tasks? Unsure if AI's potential outweighs its risks? Don't know where to start without learning Python?
 
-Sound familiar? You're in the right place. [Syntax & Empathy](https://syntaxandempathy.ai) is a bi-weekly newsletters covering systematic frameworks, useful discoveries, and interactive resources to help you build better AI collaborations.
+Sound familiar? You're in the right place. [Syntax & Empathy](https://www.syntaxandempathy.ai/) is a bi-weekly newsletters covering systematic frameworks, useful discoveries, and interactive resources to help you build better AI collaborations.
