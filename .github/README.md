@@ -5,11 +5,11 @@ This directory contains automated workflows for repository maintenance.
 ## README Manager
 
 **Workflow:** `readme-manager.yml`
-**Purpose:** Automated README file maintenance using Gemini 1.5 Flash AI
+**Purpose:** Automated README file maintenance using Gemini 2.5 Flash AI
 
 ### Overview
 
-The README Manager ensures that all directories in the repository have accurate, up-to-date README files that help visitors navigate the content intelligently. It uses Google's Gemini 1.5 Flash model to analyze directory contents and generate or update README files based on templates in `09-templates/readme/`.
+The README Manager ensures that all directories in the repository have accurate, up-to-date README files that help visitors navigate the content intelligently. It uses Google's Gemini 2.5 Flash model to analyze directory contents and generate or update README files based on templates in `09-templates/readme/`.
 
 ### Modes
 
@@ -102,7 +102,7 @@ You must add a **GEMINI_API_KEY** secret to your repository:
    - **Content template**: For directories containing content files
 
 3. **AI Generation**
-   - Uses Gemini 1.5 Flash to analyze directory context
+   - Uses Gemini 2.5 Flash to analyze directory context
    - Generates professional, clear README content
    - Maintains consistency with repository style and existing documentation
 

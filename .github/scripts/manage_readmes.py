@@ -42,7 +42,7 @@ class READMEManager:
 
         # Configure Gemini
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
 
         # Load templates
         self.index_template = self._load_template('09-templates/readme/index-directory-readme.md')
