@@ -5,11 +5,11 @@ This directory contains automated workflows for repository maintenance.
 ## README Manager
 
 **Workflow:** `readme-manager.yml`
-**Purpose:** Automated README file maintenance using Gemini 2.5 Flash AI
+**Purpose:** Automated README file maintenance using Gemini 1.5 Flash AI
 
 ### Overview
 
-The README Manager ensures that all directories in the repository have accurate, up-to-date README files that help visitors navigate the content intelligently. It uses Google's Gemini 2.5 Flash model to analyze directory contents and generate or update README files based on templates in `09-templates/readme/`.
+The README Manager ensures that all directories in the repository have accurate, up-to-date README files that help visitors navigate the content intelligently. It uses Google's Gemini 1.5 Flash model to analyze directory contents and generate or update README files based on templates in `09-templates/readme/`.
 
 ### Modes
 
@@ -60,12 +60,25 @@ The README Manager ensures that all directories in the repository have accurate,
 
 You must add a **GEMINI_API_KEY** secret to your repository:
 
-1. Get a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Go to your repository Settings → Secrets and variables → Actions
-3. Click "New repository secret"
-4. Name: `GEMINI_API_KEY`
-5. Value: Your Gemini API key
-6. Click "Add secret"
+**Getting the API Key:**
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click "Create API key" (or "Get API key")
+4. Accept the Terms of Service if prompted
+5. Copy the generated API key
+
+**Adding to GitHub:**
+1. Go to your repository Settings → Secrets and variables → Actions
+2. Click "New repository secret"
+3. Name: `GEMINI_API_KEY`
+4. Value: Paste your Gemini API key
+5. Click "Add secret"
+
+**Important Notes:**
+- Use Google AI Studio API keys (not Google Cloud Console keys)
+- The API key must have access to the Generative Language API
+- Free tier has rate limits but should be sufficient for most repositories
+- Keep your API key secure - never commit it to the repository
 
 ### How to Run Manually
 
@@ -89,7 +102,7 @@ You must add a **GEMINI_API_KEY** secret to your repository:
    - **Content template**: For directories containing content files
 
 3. **AI Generation**
-   - Uses Gemini 2.5 Flash to analyze directory context
+   - Uses Gemini 1.5 Flash to analyze directory context
    - Generates professional, clear README content
    - Maintains consistency with repository style and existing documentation
 
@@ -141,15 +154,26 @@ Check the workflow run logs to see:
 - Check that changes were pushed to main or claude/** branches
 - Verify changes weren't only to .github/ or *.md files (these are ignored)
 
-**API errors:**
-- Verify GEMINI_API_KEY secret is set correctly
-- Check API key has sufficient quota
+**API Error: "API_KEY_SERVICE_BLOCKED" or 403 Forbidden:**
+This usually means the API key needs to be regenerated or properly configured:
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Delete the old API key if it exists
+3. Create a new API key
+4. Make sure to accept the Terms of Service
+5. Update the GEMINI_API_KEY secret in GitHub with the new key
+6. Re-run the workflow
+
+**Other API errors:**
+- Verify GEMINI_API_KEY secret is set correctly (check for extra spaces)
+- Check API key has sufficient quota (free tier: 15 requests/minute, 1500/day)
+- Check you're using a Google AI Studio key, not a Google Cloud key
 - Review workflow logs for specific error messages
 
 **READMEs not being generated:**
 - Check that directories have actual content (not just .gitkeep)
 - Review excluded directories list
 - Check workflow logs for processing details
+- Verify templates exist in 09-templates/readme/
 
 ### Files
 

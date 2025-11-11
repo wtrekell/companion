@@ -42,7 +42,7 @@ class READMEManager:
 
         # Configure Gemini
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        self.model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
         # Load templates
         self.index_template = self._load_template('09-templates/readme/index-directory-readme.md')
@@ -291,7 +291,18 @@ Return ONLY the complete README.md content, with no preamble or explanation.
 """
 
         try:
-            response = self.model.generate_content(prompt)
+            # Add generation config for better control
+            generation_config = {
+                'temperature': 0.7,
+                'top_p': 0.95,
+                'top_k': 40,
+                'max_output_tokens': 8192,
+            }
+
+            response = self.model.generate_content(
+                prompt,
+                generation_config=generation_config
+            )
             readme_content = response.text.strip()
 
             # Basic validation
@@ -302,7 +313,23 @@ Return ONLY the complete README.md content, with no preamble or explanation.
             return readme_content
 
         except Exception as e:
-            print(f"Error generating README for {dir_path}: {e}")
+            error_msg = str(e)
+            print(f"Error generating README for {dir_path}: {error_msg}")
+
+            # Provide helpful diagnostics
+            if "403" in error_msg or "API_KEY_SERVICE_BLOCKED" in error_msg:
+                print("\n" + "="*60)
+                print("API KEY ERROR DETECTED")
+                print("="*60)
+                print("The Gemini API key appears to be blocked or invalid.")
+                print("\nPossible solutions:")
+                print("1. Verify the API key is from Google AI Studio:")
+                print("   https://aistudio.google.com/app/apikey")
+                print("2. Make sure you've accepted the Terms of Service")
+                print("3. Check if your API key has sufficient quota")
+                print("4. Ensure the key hasn't expired or been revoked")
+                print("="*60 + "\n")
+
             return None
 
     def _should_update_readme(self, analysis: Dict, new_content: str) -> bool:

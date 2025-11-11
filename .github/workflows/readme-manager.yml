@@ -93,7 +93,7 @@ jobs:
           else
             git commit -m "Update README files via ${{ steps.mode.outputs.mode }} mode
 
-            Automated README maintenance using Gemini 2.5 Flash
+            Automated README maintenance using Gemini 1.5 Flash
             Mode: ${{ steps.mode.outputs.mode }}
             Triggered by: ${{ github.event_name }}"
 
