@@ -1,0 +1,86 @@
+# StackExchange Collector Configuration
+# Configured to match Reddit settings focus: AI/LLM/ML content from major providers
+# Mirrors reddit.yaml: Anthropic, OpenAI, HuggingFace, MistralAI, Perplexity, DeepSeek
+
+# Output configuration
+output_dir: "output/stackexchange"
+
+# API configuration (optional API key for higher quotas)
+api_key: "${STACKEXCHANGE_API_KEY}"  # Optional: Get from https://stackapps.com/apps/oauth/register
+rate_limit_seconds: 2.0  # Match Reddit rate limit (2.0 seconds)
+
+# Default filtering criteria - mirrors Reddit keywords exactly
+# Match reddit.yaml line 15: ["anthropic", "deepmind", "deepseek", "hugging face", ...]
+default_filters:
+  max_age_days: 90  # Wider window for StackExchange (lower volume than Reddit)
+  min_score: 3  # Match Reddit default
+  min_answers: 0  # Allow unanswered questions (valuable for recent tech)
+  # EXACT MATCH to reddit.yaml include_keywords (line 15)
+  include_keywords: ["anthropic", "deepmind", "deepseek", "hugging face", "openai", "perplexity labs", "mistral", "llm", "large multimodal model", "multimodal model", "bard", "chatgpt*", "codex*", "gpt*", "sora*", "claude*", "claude code", "sonnet*", "opus*", "deepseek*", "gemini*", "kimi*", "llama*", "mistral*", "perplexity", "qwen*"]
+  exclude_keywords: ["promotional", "spam", "advertisement"]  # Match reddit.yaml line 16
+  required_tags: []
+  excluded_tags: ["homework"]
+
+# StackExchange sites with broad ML/AI tags, filtered by keywords
+# Strategy: Use common tags to get questions, then filter by Reddit keywords
+sites:
+  # AI Stack Exchange - dedicated AI site
+  - name: "ai"
+    tags: ["machine-learning", "deep-learning", "neural-networks", "nlp"]
+    max_questions: 20
+    include_answers: true
+    include_comments: true
+    sort_order: "activity"
+    filters:
+      min_score: 2  # Lower for smaller community
+      min_answers: 0
+
+  # Data Science - practical ML questions
+  - name: "datascience"
+    tags: ["machine-learning", "deep-learning", "neural-networks"]
+    max_questions: 20
+    include_answers: true
+    include_comments: true
+    sort_order: "activity"
+    filters:
+      min_score: 3
+      min_answers: 0
+
+  # Stack Overflow - implementation questions with broad ML tags
+  - name: "stackoverflow"
+    tags: ["machine-learning", "artificial-intelligence"]
+    max_questions: 30  # Higher volume, more filtering needed
+    include_answers: true
+    include_comments: true
+    sort_order: "activity"
+    filters:
+      min_score: 5  # Higher bar for Stack Overflow volume
+      min_answers: 1
+
+  # Cross Validated (Stats) - ML theory
+  - name: "stats"
+    tags: ["machine-learning", "deep-learning"]
+    max_questions: 20
+    include_answers: true
+    include_comments: true
+    sort_order: "votes"
+    filters:
+      min_score: 3
+      min_answers: 0
+
+  # Computational Science - ML computation/optimization
+  - name: "scicomp"
+    tags: ["machine-learning", "optimization"]
+    max_questions: 15
+    include_answers: true
+    include_comments: true
+    sort_order: "activity"
+    filters:
+      min_score: 2
+      min_answers: 0
+
+# API settings (usually don't need to change these)
+api_version: "2.3"
+base_url: "https://api.stackexchange.com"
+user_agent: "Signal:StackExchange:Collector:v2.0.0"
+max_page_size: 100

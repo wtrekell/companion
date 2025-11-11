@@ -1,0 +1,81 @@
+# tools/web_articles/data/links_for_review.yaml
+# Purpose: This file contains NEW links discovered for human review before content fetching.
+# Instructions:
+#  - Review each source and its links below.
+#  - Delete unwanted link entries or comment them out (prefix the entire link block with "#").
+#  - Verify each URL and title are correct.
+#  - When ready to fetch content, run: web-fetch
+#
+# How to edit:
+#  - To remove a link permanently: delete the entire "- url: ..." block for that link.
+#  - To disable a link without deleting: add a "#" at the start of each line of that link block.
+#  - Keep the YAML structure valid after edits.
+#
+# Note: matched_keywords lists may be empty when no keywords were matched during filtering.
+#
+file_metadata:
+  generated_by: Link Review File Generator
+  generated_on: '2025-11-04'
+  total_sources: 4
+  total_links: 6
+sources:
+- source_url: https://openai.com/news/
+  discovery_date: '2025-11-04'
+  notes: Links discovered from https://openai.com/news/ (2 new)
+  links:
+  - url: https://openai.com/index/introducing-indqa/
+    title: 'Introducing IndQA\\
+
+      \\
+
+      ResearchNov 3, 2025'
+    matched_keywords: []
+  - url: https://openai.com/index/aws-and-openai-partnership/
+    title: 'AWS and OpenAI announce multi-year strategic partnership\\
+
+      \\
+
+      CompanyNov 3, 2025'
+    matched_keywords: []
+- source_url: https://www.anthropic.com/engineering
+  discovery_date: '2025-11-04'
+  notes: Links discovered from https://www.anthropic.com/engineering (1 new)
+  links:
+  - url: https://www.anthropic.com/engineering/code-execution-with-mcp
+    title: Code Execution With Mcp
+    matched_keywords: []
+- source_url: https://cloud.google.com/blog/products/ai-machine-learning
+  discovery_date: '2025-11-04'
+  notes: Links discovered from https://cloud.google.com/blog/products/ai-machine-learning
+    (2 new)
+  links:
+  - url: https://cloud.google.com/blog/products/containers-kubernetes/ray-on-tpus-with-gke-a-more-native-experience
+    title: 'Containers & Kubernetes\\
+
+      \\
+
+      **A more native experience for Cloud TPUs with Ray on GKE** \\
+
+      \\
+
+      By Nisha Mariam Johnson • 6-minute read'
+    matched_keywords: []
+  - url: https://cloud.google.com/blog/products/containers-kubernetes/ray-on-gke-new-features-for-ai-scheduling-and-scaling
+    title: 'Containers & Kubernetes\\
+
+      \\
+
+      **Evolving Ray and Kubernetes together for the future of distributed AI and
+      ML** \\
+
+      \\
+
+      By Andrew Sy Kim • 6-minute read'
+    matched_keywords: []
+- source_url: https://www.perplexity.ai/hub
+  discovery_date: '2025-11-04'
+  notes: Links discovered from https://www.perplexity.ai/hub (1 new)
+  links:
+  - url: https://www.perplexity.ai/hub/blog/bullying-is-not-innovation
+    title: Bullying is Not Innovation
+    matched_keywords: []

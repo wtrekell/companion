@@ -1,0 +1,23 @@
+[project]
+name = "web-articles-collector"
+version = "0.1.0"
+description = "Web articles content collector tool"
+requires-python = ">=3.12"
+dependencies = [
+    "firecrawl>=1.0.0",
+    "click>=8.0.0",
+    "python-dotenv>=1.2.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+web-discover = "tools.web_articles.src.collectors.web_articles.cli:discover"
+web-fetch = "tools.web_articles.src.collectors.web_articles.cli:fetch"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

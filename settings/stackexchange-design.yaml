@@ -1,0 +1,51 @@
+# StackExchange Collector Configuration - Design/UX Focus
+# Based on reddit-design.yaml subreddits and keywords
+
+output_dir: "output/stackexchange/design"
+api_key: "${STACKEXCHANGE_API_KEY}"
+rate_limit_seconds: 1.0
+
+# Default filters - RELAXED for testing
+default_filters:
+  max_age_days: 30
+  min_score: 1
+  min_answers: 0
+  include_keywords: []
+  exclude_keywords:
+    - "spam"
+    - "homework"
+  required_tags: []
+  excluded_tags: []
+
+# StackExchange sites for design/UX
+sites:
+  - name: "ux"
+    tags:
+      - "user-research"
+      - "usability"
+      - "prototyping"
+    max_questions: 20
+    include_answers: true
+    include_comments: true
+    sort_order: "activity"
+    filters:
+      min_score: 1
+      min_answers: 0
+
+  - name: "graphicdesign"
+    tags:
+      - "adobe-illustrator"
+      - "figma"
+      - "typography"
+    max_questions: 15
+    include_answers: true
+    include_comments: true
+    sort_order: "activity"
+    filters:
+      min_score: 1
+      min_answers: 0
+
+api_version: "2.3"
+base_url: "https://api.stackexchange.com"
+user_agent: "Signal:StackExchange:Collector:v2.0.0"
+max_page_size: 100

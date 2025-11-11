@@ -1,0 +1,84 @@
+# Web Articles Collection Configuration
+# This file defines source websites and filtering criteria for article collection
+
+# Output directory for collected markdown files (root-relative path, no ./ prefix)
+output_dir: "output/web-articles"
+
+# State file for tracking discovered URLs (root-relative path, no ./ prefix)
+state_file: "tools/web_articles/data/gatherers_state.json"
+
+# Review file for human approval of discovered links (root-relative path, no ./ prefix)
+review_file: "tools/web_articles/data/links_for_review.yaml"
+
+# Default rate limit between requests (seconds)
+# Firecrawl free tier: 10 requests/minute = 1 request per 6 seconds minimum
+rate_limit_seconds: 7.0
+
+# Global exclude keywords - filter out links containing these terms (case-insensitive)
+# Checks both URL path and title
+exclude_keywords:
+  - legal
+  - commercial-terms
+  - consumer-terms
+  - government
+  - political
+  - politics
+  - raises-series
+  - federal
+  - national
+  - enterprise
+
+# Source websites to collect from
+sources:
+  - url: "https://openai.com/news/"
+    max_depth: 1
+    keywords: []  # Add keywords as needed
+    link_patterns:
+      include: []  # Add patterns as needed
+      exclude: []  # Add patterns as needed
+
+  - url: "https://www.anthropic.com/news"
+    max_depth: 1
+    keywords: []
+    link_patterns:
+      include: []
+      exclude: []
+
+  - url: "https://www.anthropic.com/engineering"
+    max_depth: 1
+    keywords: []
+    link_patterns:
+      include: []
+      exclude: []
+
+  - url: "https://blog.google/technology/ai/"
+    max_depth: 1
+    keywords: []
+    link_patterns:
+      include: []
+      exclude: []
+
+  - url: "https://cloud.google.com/blog/products/ai-machine-learning"
+    max_depth: 1
+    keywords: []
+    link_patterns:
+      include: []
+      exclude: []
+
+  - url: "https://www.perplexity.ai/hub"
+    max_depth: 1
+    keywords: []
+    link_patterns:
+      include: []
+      exclude: []
+
+# Firecrawl configuration (uses FIRECRAWL_API_KEY from .env)
+firecrawl:
+  # Maximum number of pages to crawl per source
+  max_pages_per_source: 100
+
+  # Timeout for page scraping (milliseconds)
+  timeout_ms: 30000
+
+  # Only extract main content (recommended)
+  only_main_content: true
