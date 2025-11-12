@@ -1,0 +1,17 @@
+{
+  "module": "module_1_textstat_lex_v1",
+  "timestamp_utc": "2025-11-11T18:54:12Z",
+  "seed": 7,
+  "library_versions": {
+    "textstat": "0.7.11",
+    "wordfreq": "3.1.1"
+  },
+  "input_count": 4,
+  "source_dir": "/content",
+  "articles": 1,
+  "versions_per_article_min": 4,
+  "versions_per_article_max": 4,
+  "expected_versions": 4,
+  "version_order_source": "filename_prefix",
+  "notes": []
+}

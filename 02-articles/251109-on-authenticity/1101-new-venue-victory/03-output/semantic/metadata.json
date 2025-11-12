@@ -1,0 +1,23 @@
+{
+  "version_order_source": "filename_prefix",
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_dim": 384,
+  "normalize_embeddings": true,
+  "batch_size": 64,
+  "device": "cpu",
+  "uses_m2_windows": true,
+  "window_alignment_policy": "from_module_2_spans/full_containment",
+  "articles": 1,
+  "versions_per_article_min": 1,
+  "versions_per_article_max": 4,
+  "expected_versions": 4,
+  "enable_nli": false,
+  "windows_available": true,
+  "windows_total": 501,
+  "windows_with_lt2_sentences": 0,
+  "notes": [
+    "Window inclusion rule: full sentence containment within [char_start, char_end).",
+    "Windows with <2 sentences emit NaN for window metrics.",
+    "Cosine metrics use normalized embeddings; ranges within [0,1]."
+  ]
+}

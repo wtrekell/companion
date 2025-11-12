@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vs Human Content Analysis Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .metric {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .metric-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .label-human { color: green; font-weight: bold; }
+        .label-synthetic { color: red; font-weight: bold; }
+        .label-hybrid { color: orange; font-weight: bold; }
+        .label-uncertain { color: gray; font-weight: bold; }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 AI vs Human Content Analysis</h1>
+        <p>Multi-module pipeline analysis report</p>
+        <p style="opacity: 0.8; font-size: 14px;">Generated: 2025-11-11T19:11:27.322171Z</p>
+    </div>
+
+    <div class="card">
+        <h2>📊 Summary Metrics</h2>
+        <div class="metric">
+            <div class="metric-value">1</div>
+            <div class="metric-label">Articles</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">4</div>
+            <div class="metric-label">Versions</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">501</div>
+            <div class="metric-label">Windows</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">11</div>
+            <div class="metric-label">Segments</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">10</div>
+            <div class="metric-label">Consensus Seams</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">17</div>
+            <div class="metric-label">Features</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📈 Attribution Timeline</h2>
+        <p>Segment labels and confidence across all documents</p>
+        <img src="timeline_heatmap.png" alt="Timeline Heatmap">
+    </div>
+
+    <div class="card">
+        <h2>🔍 Change-Point Detection Map</h2>
+        <p>Detected boundaries between human and synthetic content</p>
+        <img src="hybrid_map.png" alt="Hybrid Map">
+    </div>
+
+    <div class="card">
+        <h2>📋 Document Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Version</th>
+                    <th>Windows</th>
+                    <th>Segments</th>
+                    <th>Primary Label</th>
+                    <th>Avg Confidence</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>not-magic-measurement</td>
+                    <td>v1</td>
+                    <td>123</td>
+                    <td>1</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.630</td>
+                </tr>
+
+                <tr>
+                    <td>not-magic-measurement</td>
+                    <td>v2</td>
+                    <td>155</td>
+                    <td>1</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.623</td>
+                </tr>
+
+                <tr>
+                    <td>not-magic-measurement</td>
+                    <td>v3</td>
+                    <td>129</td>
+                    <td>1</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.626</td>
+                </tr>
+
+                <tr>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td>94</td>
+                    <td>8</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.606</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>🎯 Segment Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Segment</th>
+                    <th>Article</th>
+                    <th>Version</th>
+                    <th>Label</th>
+                    <th>Confidence</th>
+                    <th>Windows</th>
+                    <th>Char Range</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>#0</td>
+                    <td>not-magic-measurement</td>
+                    <td>v1</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.630</td>
+                    <td>123</td>
+                    <td>0–10784</td>
+                </tr>
+
+                <tr>
+                    <td>#0</td>
+                    <td>not-magic-measurement</td>
+                    <td>v2</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.623</td>
+                    <td>155</td>
+                    <td>0–13453</td>
+                </tr>
+
+                <tr>
+                    <td>#0</td>
+                    <td>not-magic-measurement</td>
+                    <td>v3</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.626</td>
+                    <td>129</td>
+                    <td>0–9840</td>
+                </tr>
+
+                <tr>
+                    <td>#0</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.674</td>
+                    <td>5</td>
+                    <td>0–837</td>
+                </tr>
+
+                <tr>
+                    <td>#1</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.771</td>
+                    <td>3</td>
+                    <td>628–1166</td>
+                </tr>
+
+                <tr>
+                    <td>#2</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.654</td>
+                    <td>1</td>
+                    <td>1048–1201</td>
+                </tr>
+
+                <tr>
+                    <td>#3</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.648</td>
+                    <td>2</td>
+                    <td>1090–1412</td>
+                </tr>
+
+                <tr>
+                    <td>#4</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-uncertain">UNCERTAIN</td>
+                    <td>0.500</td>
+                    <td>2</td>
+                    <td>1202–1608</td>
+                </tr>
+
+                <tr>
+                    <td>#5</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-uncertain">UNCERTAIN</td>
+                    <td>0.500</td>
+                    <td>1</td>
+                    <td>1413–1674</td>
+                </tr>
+
+                <tr>
+                    <td>#6</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-uncertain">UNCERTAIN</td>
+                    <td>0.500</td>
+                    <td>3</td>
+                    <td>1514–1857</td>
+                </tr>
+
+                <tr>
+                    <td>#7</td>
+                    <td>not-magic-measurement</td>
+                    <td>v4</td>
+                    <td class="label-human">HUMAN</td>
+                    <td>0.601</td>
+                    <td>77</td>
+                    <td>1736–7757</td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+    </div>
+
+    <div class="card">
+        <h2>🔧 Features Used</h2>
+        <p>Pipeline version: <strong>3.4</strong></p>
+        <p>Total features: <strong>17</strong></p>
+        <ul>
+            <li><code>burstiness_token_cv_win</code></li>
+            <li><code>burstiness_topk_mean_cv_win</code></li>
+            <li><code>stopword_rate_win</code></li>
+            <li><code>content_rate_win</code></li>
+            <li><code>hapax_rate_win</code></li>
+            <li><code>mean_sent_len_tok_win</code></li>
+            <li><code>std_sent_len_tok_win</code></li>
+            <li><code>depth_mean_win</code></li>
+            <li><code>coord_rate_win</code></li>
+            <li><code>subord_rate_win</code></li>
+            <li><code>dm_density_per_100toks_win</code></li>
+            <li><code>topic_changed</code></li>
+            <li><code>paraphrase_entropy</code></li>
+            <li><code>idiom_delta</code></li>
+            <li><code>hedge_density</code></li>
+            <li><code>intensifier_density</code></li>
+            <li><code>contradiction_flag</code></li>
+
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Generated by AI vs Human Content Detection Pipeline v3.4</p>
+        <p>Modules: Lexical (1) | NLTK (2) | spaCy (3) | Rapidfuzz (7) | Lexicons (8) | NLI (9) | Ruptures (10) | Calibration (11) | Schema (12)</p>
+    </div>
+</body>
+</html>

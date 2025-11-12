@@ -1,0 +1,61 @@
+{
+  "bundle_name": "ai_v_human_pipeline_v3.4_20251111_191129",
+  "created_at": "2025-11-11T19:11:30.076538Z",
+  "pipeline_version": "3.4",
+  "modules": [
+    {
+      "module": "nltk",
+      "files": 9
+    },
+    {
+      "module": "transformers",
+      "files": 7
+    },
+    {
+      "module": "nli",
+      "files": 2
+    },
+    {
+      "module": "textstat_lex",
+      "files": 8
+    },
+    {
+      "module": "spacy",
+      "files": 9
+    },
+    {
+      "module": "semantic",
+      "files": 10
+    },
+    {
+      "module": "ruptures",
+      "files": 3
+    },
+    {
+      "module": "bertopic",
+      "files": 13
+    },
+    {
+      "module": "final",
+      "files": 4
+    },
+    {
+      "module": "calibration",
+      "files": 3
+    },
+    {
+      "module": "lexicons",
+      "files": 2
+    },
+    {
+      "module": "rapidfuzz",
+      "files": 10
+    }
+  ],
+  "total_modules": 12,
+  "contents": {
+    "outputs/": "All module outputs (parquet, plots, metadata)",
+    "README.txt": "Bundle overview and instructions",
+    "manifest.json": "This file - bundle metadata"
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-11T19:11:27.322171Z",
+    "pipeline_version": "3.4",
+    "total_articles": 1,
+    "total_versions": 4,
+    "total_windows": 501,
+    "total_segments": 11,
+    "total_seams": 13,
+    "consensus_seams": 10
+  },
+  "documents": [
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 1,
+      "version_tag": "v1",
+      "n_windows": 123,
+      "n_segments": 1,
+      "primary_label": "human",
+      "confidence_mean": 0.6301804753964658,
+      "label_distribution": {
+        "human": 1
+      }
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 2,
+      "version_tag": "v2",
+      "n_windows": 155,
+      "n_segments": 1,
+      "primary_label": "human",
+      "confidence_mean": 0.6233527359285176,
+      "label_distribution": {
+        "human": 1
+      }
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 3,
+      "version_tag": "v3",
+      "n_windows": 129,
+      "n_segments": 1,
+      "primary_label": "human",
+      "confidence_mean": 0.6258291456035114,
+      "label_distribution": {
+        "human": 1
+      }
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "version_tag": "v4",
+      "n_windows": 94,
+      "n_segments": 8,
+      "primary_label": "human",
+      "confidence_mean": 0.6059415924696714,
+      "label_distribution": {
+        "human": 5,
+        "uncertain": 3
+      }
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": 0,
+      "article_id": "not-magic-measurement",
+      "version_id": 1,
+      "label": "human",
+      "confidence": 0.6301804753964658,
+      "n_windows": 123,
+      "win_start": 1,
+      "win_end": 123,
+      "char_start": 0,
+      "char_end": 10784,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.09482621055626095,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 0,
+      "article_id": "not-magic-measurement",
+      "version_id": 2,
+      "label": "human",
+      "confidence": 0.6233527359285176,
+      "n_windows": 155,
+      "win_start": 1,
+      "win_end": 155,
+      "char_start": 0,
+      "char_end": 13453,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.10678113768941777,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 0,
+      "article_id": "not-magic-measurement",
+      "version_id": 3,
+      "label": "human",
+      "confidence": 0.6258291456035114,
+      "n_windows": 129,
+      "win_start": 1,
+      "win_end": 129,
+      "char_start": 0,
+      "char_end": 9840,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.03872672198523948,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 0,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "human",
+      "confidence": 0.6736660548004443,
+      "n_windows": 5,
+      "win_start": 1,
+      "win_end": 5,
+      "char_start": 0,
+      "char_end": 837,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0647837630780729,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 1,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "human",
+      "confidence": 0.7711380914827224,
+      "n_windows": 3,
+      "win_start": 6,
+      "win_end": 8,
+      "char_start": 628,
+      "char_end": 1166,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 2,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "human",
+      "confidence": 0.6539787306023972,
+      "n_windows": 1,
+      "win_start": 9,
+      "win_end": 9,
+      "char_start": 1048,
+      "char_end": 1201,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 3,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "human",
+      "confidence": 0.6478513008245103,
+      "n_windows": 2,
+      "win_start": 10,
+      "win_end": 11,
+      "char_start": 1090,
+      "char_end": 1412,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 4,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "uncertain",
+      "confidence": 0.5,
+      "n_windows": 2,
+      "win_start": 12,
+      "win_end": 13,
+      "char_start": 1202,
+      "char_end": 1608,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 5,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "uncertain",
+      "confidence": 0.5,
+      "n_windows": 1,
+      "win_start": 14,
+      "win_end": 14,
+      "char_start": 1413,
+      "char_end": 1674,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 6,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "uncertain",
+      "confidence": 0.5,
+      "n_windows": 3,
+      "win_start": 15,
+      "win_end": 17,
+      "char_start": 1514,
+      "char_end": 1857,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.0,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    },
+    {
+      "segment_id": 7,
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "label": "human",
+      "confidence": 0.6008985620472972,
+      "n_windows": 77,
+      "win_start": 18,
+      "win_end": 94,
+      "char_start": 1736,
+      "char_end": 7757,
+      "features": {
+        "burstiness_mean": NaN,
+        "hedge_density_mean": 0.06963785132718343,
+        "contradiction_rate": 0.0,
+        "idiom_delta_mean": 0.0
+      }
+    }
+  ],
+  "hybrid_seams": [
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 1,
+      "win_id": 17,
+      "detector": "pelt",
+      "is_consensus": false
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 2,
+      "win_id": 17,
+      "detector": "pelt",
+      "is_consensus": false
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 3,
+      "win_id": 17,
+      "detector": "pelt",
+      "is_consensus": false
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 17,
+      "detector": "pelt",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 5,
+      "detector": "binseg",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 9,
+      "detector": "binseg",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 13,
+      "detector": "binseg",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 17,
+      "detector": "binseg",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 5,
+      "detector": "kernel",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 8,
+      "detector": "kernel",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 11,
+      "detector": "kernel",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 14,
+      "detector": "kernel",
+      "is_consensus": true
+    },
+    {
+      "article_id": "not-magic-measurement",
+      "version_id": 4,
+      "win_id": 17,
+      "detector": "kernel",
+      "is_consensus": true
+    }
+  ],
+  "feature_summary": {
+    "total_features": 17,
+    "features": [
+      "burstiness_token_cv_win",
+      "burstiness_topk_mean_cv_win",
+      "stopword_rate_win",
+      "content_rate_win",
+      "hapax_rate_win",
+      "mean_sent_len_tok_win",
+      "std_sent_len_tok_win",
+      "depth_mean_win",
+      "coord_rate_win",
+      "subord_rate_win",
+      "dm_density_per_100toks_win",
+      "topic_changed",
+      "paraphrase_entropy",
+      "idiom_delta",
+      "hedge_density",
+      "intensifier_density",
+      "contradiction_flag"
+    ],
+    "feature_stats": {
+      "burstiness_token_cv_win": {
+        "mean": 0.3234953735374375,
+        "std": 0.20109894564798927,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "burstiness_topk_mean_cv_win": {
+        "mean": 0.9165494740146181,
+        "std": 0.1639802956080488,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "stopword_rate_win": {
+        "mean": 0.5439816293345765,
+        "std": 0.19416844880102554,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "content_rate_win": {
+        "mean": 0.4560183706654236,
+        "std": 0.1941684488010255,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "hapax_rate_win": {
+        "mean": 0.7949456672999096,
+        "std": 0.13729040345203816,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "mean_sent_len_tok_win": {
+        "mean": 0.21940642524474857,
+        "std": 0.17093808377193856,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "std_sent_len_tok_win": {
+        "mean": 0.11014528047212209,
+        "std": 0.16418847479202192,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "depth_mean_win": {
+        "mean": 0.3393887132317716,
+        "std": 0.15799836931796907,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "coord_rate_win": {
+        "mean": 0.15616639551409017,
+        "std": 0.19489011833778366,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "subord_rate_win": {
+        "mean": 0.3198624580780835,
+        "std": 0.22445126995684114,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "dm_density_per_100toks_win": {
+        "mean": 0.011399111391625824,
+        "std": 0.07447862741623154,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "topic_changed": {
+        "mean": 0.25149700598802394,
+        "std": 0.4343072121102949,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "paraphrase_entropy": {
+        "mean": 0.9125449135048834,
+        "std": 0.17548090026010796,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "idiom_delta": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "hedge_density": {
+        "mean": 0.07763768611568708,
+        "std": 0.15558323894986567,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "intensifier_density": {
+        "mean": 0.0773872835100032,
+        "std": 0.13985779819387262,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "contradiction_flag": {
+        "mean": 0.04590818363273453,
+        "std": 0.20949516355490105,
+        "min": 0.0,
+        "max": 1.0
+      }
+    }
+  }
+}

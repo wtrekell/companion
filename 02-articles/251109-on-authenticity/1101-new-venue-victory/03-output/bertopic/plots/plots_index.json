@@ -1,0 +1,11 @@
+{
+  "topic_timeline": [
+    "/content/outputs/bertopic/plots/topic_timeline_not-magic-measurement.png"
+  ],
+  "topic_coherence": [
+    "/content/outputs/bertopic/plots/topic_coherence_not-magic-measurement.png"
+  ],
+  "globals": [
+    "/content/outputs/bertopic/plots/topic_counts_hist.png"
+  ]
+}

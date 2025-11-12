@@ -1,0 +1,38 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "device": "cpu",
+  "batch_size": 32,
+  "umap_params": {
+    "n_neighbors": 15,
+    "n_components": 5,
+    "min_dist": 0.0,
+    "metric": "cosine",
+    "random_state": 42,
+    "low_memory": true
+  },
+  "hdbscan_params_used": {
+    "min_cluster_size": 8,
+    "min_samples": null,
+    "metric": "euclidean",
+    "cluster_selection_method": "eom"
+  },
+  "hdbscan_params_attempted": [
+    8
+  ],
+  "vectorizer": {
+    "stop_words": "english",
+    "min_df": 1,
+    "ngram_range": [
+      1,
+      2
+    ]
+  },
+  "corpus_windows": 501,
+  "fallback": null,
+  "basis_mismatch_windows": 0,
+  "metrics_written": true,
+  "articles": 1,
+  "windows": 501,
+  "mean_noise_rate": 0.1104944632629356
+}

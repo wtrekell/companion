@@ -1,0 +1,27 @@
+{
+  "cell_id": "3.9",
+  "status": "pass",
+  "checks": {
+    "doc_schema": {
+      "present": true,
+      "missing": [],
+      "extra": []
+    },
+    "win_schema": {
+      "present": true,
+      "missing": [],
+      "extra": []
+    },
+    "doc_values": {
+      "depth_nonnegative": true,
+      "depth_cv_finite_or_nan": true,
+      "coord_subord_ratio_finite": true,
+      "rows": 4
+    },
+    "windows_invariants": {
+      "groups_checked": 4,
+      "win_id_contiguous": true,
+      "char_spans_monotonic": true
+    }
+  }
+}

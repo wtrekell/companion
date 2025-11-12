@@ -1,0 +1,13 @@
+{
+  "bundle": "module7_artifacts_20251111-190510.zip",
+  "created_at": "20251111-190510",
+  "file_count": 6,
+  "files": [
+    "metadata.json",
+    "paraphrase_entropy.parquet",
+    "paraphrase_entropy_doc.parquet",
+    "plots/entropy_ridge.png",
+    "plots/plots_index.json",
+    "plots/repetition_heatmap_not-magic-measurement.png"
+  ]
+}

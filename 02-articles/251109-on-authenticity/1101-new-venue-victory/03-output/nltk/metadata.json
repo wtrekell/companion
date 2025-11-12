@@ -1,0 +1,16 @@
+{
+  "module": "2",
+  "window_sents": 3,
+  "stride_sents": 1,
+  "keep_tail": false,
+  "tokenizer_word": "NLTK Treebank",
+  "tokenizer_sent": "NLTK Punkt (english)",
+  "version_order_source": "filename_prefix",
+  "articles": [
+    "not-magic-measurement"
+  ],
+  "n_articles": 1,
+  "versions_per_article_min": 4,
+  "versions_per_article_max": 4,
+  "expected_versions": 4
+}

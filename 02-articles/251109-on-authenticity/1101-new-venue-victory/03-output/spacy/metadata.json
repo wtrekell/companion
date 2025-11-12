@@ -1,0 +1,49 @@
+{
+  "module": "3",
+  "version_order_source": "filename_prefix",
+  "spacy_version": "3.8.7",
+  "model": "en_core_web_sm",
+  "components_enabled": [
+    "tok2vec",
+    "tagger",
+    "parser",
+    "attribute_ruler",
+    "lemmatizer"
+  ],
+  "articles": [
+    "not-magic-measurement"
+  ],
+  "n_articles": 1,
+  "versions_per_article_min": 4,
+  "versions_per_article_max": 4,
+  "expected_versions": 4,
+  "window_alignment_policy": "from_module_2_spans",
+  "alignment_rule": "full_containment",
+  "epsilon_ratio": 1e-08,
+  "lexicon_path": "lexicons/discourse_markers_en.txt",
+  "lexicon_size": 26,
+  "plotted_articles_capped": false,
+  "windows_available": true,
+  "document_basis_by_article": {
+    "not-magic-measurement": "text"
+  },
+  "lexicon_sha256": "d813ef98c2390a683445632d2898cabfd7a9ce7ca198677e762940b0bbc1acb7",
+  "coord_labels_used": [
+    "cc",
+    "conj",
+    "parataxis"
+  ],
+  "subord_labels_used": [
+    "mark",
+    "advcl",
+    "ccomp",
+    "xcomp",
+    "acl",
+    "relcl",
+    "csubj",
+    "csubj:pass"
+  ],
+  "dm_match": "lowercase, multiword-first, word-boundary, non-overlapping",
+  "sent_boundary_disagreement_policy": "count window if any spaCy sentence partially overlaps",
+  "sent_boundary_disagreement_rate_windows": 0.3932135728542914
+}

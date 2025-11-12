@@ -32,6 +32,8 @@ tools/**/*.pdf
 *_state.db
 .*_state.db
 input/
+raw
+
 # OS
 .DS_Store
 thumbs.db

@@ -1,0 +1,8 @@
+{
+  "entropy_ridge": [
+    "outputs/rapidfuzz/plots/entropy_ridge.png"
+  ],
+  "repetition_heatmaps": [
+    "outputs/rapidfuzz/plots/repetition_heatmap_not-magic-measurement.png"
+  ]
+}
